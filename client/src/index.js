@@ -17,7 +17,7 @@ import{
 } from "redux-persist"
 import storage from 'redux-persist/lib/storage';
 import { PersistGate } from 'redux-persist/integration/react';
-import { buildGetDefaultMiddleware } from '@reduxjs/toolkit/dist/getDefaultMiddleware';
+import { getDefaultMiddleware } from '@reduxjs/toolkit';
 
 const persistConfig = {key : 'root' , storage , version : 1}; /// storage engine : webstorage
 const persistedReducer = persistReducer(persistConfig , authReducer);//function returns a new reducer that incorporates the persistence logic.
